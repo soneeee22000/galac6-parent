@@ -7,6 +7,24 @@ Mobile companion app for parents to track their child's AI-tutored learning on G
 ![React Native](https://img.shields.io/badge/React_Native-0.81-61DAFB?logo=react)
 ![Claude API](https://img.shields.io/badge/Claude_API-Haiku_4.5-7C3AED?logo=anthropic)
 ![License](https://img.shields.io/badge/License-MIT-green)
+![Platform](https://img.shields.io/badge/Platform-iOS_|_Android_|_Web-lightgrey)
+![Zustand](https://img.shields.io/badge/State-Zustand_5-443E38?logo=npm)
+
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/activity-feed.png" alt="Activity Feed" width="180" />
+  &nbsp;&nbsp;
+  <img src="screenshots/report.png" alt="Weekly AI Report" width="180" />
+  &nbsp;&nbsp;
+  <img src="screenshots/controls.png" alt="Screen Time Controls" width="180" />
+  &nbsp;&nbsp;
+  <img src="screenshots/profile.png" alt="Child Profiles" width="180" />
+</p>
+
+<p align="center">
+  <em>Activity Feed &nbsp;|&nbsp; AI Weekly Report &nbsp;|&nbsp; Screen Time Controls &nbsp;|&nbsp; Child Profiles</em>
+</p>
 
 ## About
 
@@ -52,32 +70,38 @@ graph TB
 ## Features
 
 ### Activity Feed
+
 - Real-time cards showing child's learning sessions
 - Subject color-coded badges (Maths, French, Science, etc.)
 - Score percentages, XP earned, and session duration
 - Pull-to-refresh with animated notification banners
 
 ### Weekly AI Report
+
 - AI-generated learning analysis powered by Claude API
 - Subject breakdown with progress bars and average scores
 - Personalized strengths, improvement areas, and actionable recommendations
 
 ### Screen Time Controls
+
 - Visual progress ring showing daily usage vs limit
 - Quick-set buttons (30m / 60m / 90m / 120m)
 - App lock toggle with status indicator
 - Weekly study planner with subject assignments per day
 
 ### Child Profiles
+
 - Multi-child support with profile switcher
 - Per-child stats: XP, streak, coins, daily minutes
 - Active profile indicator across all tabs
 
 ### Onboarding
+
 - 4-step welcome flow: Welcome, Name, Grade, Confirmation
 - Grade picker covering CP through Terminale
 
 ### In-App Notifications
+
 - Animated slide-in banner simulating push notifications
 - Auto-dismisses after 4 seconds
 
@@ -218,25 +242,25 @@ erDiagram
 
 ## Design Decisions
 
-| Decision | Choice | Why |
-|----------|--------|-----|
-| Styling | React Native StyleSheet | NativeWind had compatibility issues with Expo SDK 54; StyleSheet is zero-config and reliable |
-| State | Zustand | Minimal boilerplate, TypeScript-first, no providers needed |
-| Navigation | Expo Router | File-based routing, type-safe, built into Expo |
-| AI Reports | Claude Haiku 4.5 | Fast, cheap, good enough for structured report generation |
-| Mock Data | In-memory with realistic patterns | No backend access; mock service mirrors real Galac6 activity types |
+| Decision   | Choice                            | Why                                                                                          |
+| ---------- | --------------------------------- | -------------------------------------------------------------------------------------------- |
+| Styling    | React Native StyleSheet           | NativeWind had compatibility issues with Expo SDK 54; StyleSheet is zero-config and reliable |
+| State      | Zustand                           | Minimal boilerplate, TypeScript-first, no providers needed                                   |
+| Navigation | Expo Router                       | File-based routing, type-safe, built into Expo                                               |
+| AI Reports | Claude Haiku 4.5                  | Fast, cheap, good enough for structured report generation                                    |
+| Mock Data  | In-memory with realistic patterns | No backend access; mock service mirrors real Galac6 activity types                           |
 
 ## Galac6 Ecosystem
 
 This app complements the existing Galac6 web platform:
 
-| Platform | What It Does | Status |
-|----------|-------------|--------|
-| galac6.io | Marketing site | Live |
-| galac6web.netlify.app | Student tutoring (Socratic AI, quizzes, exams) | Live (beta) |
-| **Galac6 Parent** | **Parent tracking + controls** | **Prototype** |
-| Galac6 Mobile Student | Student app | Roadmap |
-| Galac6 IoT Device | Screen-free voice tutor | Concept |
+| Platform              | What It Does                                   | Status        |
+| --------------------- | ---------------------------------------------- | ------------- |
+| galac6.io             | Marketing site                                 | Live          |
+| galac6web.netlify.app | Student tutoring (Socratic AI, quizzes, exams) | Live (beta)   |
+| **Galac6 Parent**     | **Parent tracking + controls**                 | **Prototype** |
+| Galac6 Mobile Student | Student app                                    | Roadmap       |
+| Galac6 IoT Device     | Screen-free voice tutor                        | Concept       |
 
 ## Author
 
